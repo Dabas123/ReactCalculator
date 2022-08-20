@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>React Calculator</title>
+        <link rel="icon" type="image/x-icon" href="favicon.png">
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
     </head>
     <body>
-        <div>React sample app</div>
+        <div>React calculator app</div>
         <div id="app"></div>
-        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-        <script type="text/jsx">
+        <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+        <script src="./js/Calculator.js"></script>        
+        <script type="text/jsx" src="./js/App.js"></script>
+        <script type="text/jsx" src="./js/components/Display.js"></script>
+        <script type="text/jsx" src="./js/components/Button.js"></script>
+        <script type="text/jsx">            
             const app = document.getElementById('app');
-            function HomePage() { 
-                const [likes, setLikes] = React.useState(0);
-
-                function handleClick() {
-                  setLikes(likes + 1);
-                }
-
-                return (
-                  <div>
-                   <button onClick={handleClick}>Likes ({likes})</button>
-                  </div>
-                );
-            }
-            ReactDOM.render(<HomePage/>, app);
+            let cl = new Calculator();
+            ReactDOM.render(<App calculator={cl} />, app);
+            
         </script>
     </body>
 </html>
