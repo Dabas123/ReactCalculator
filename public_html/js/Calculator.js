@@ -224,8 +224,8 @@ class Calculator{
      * @returns {string}
      */
     getFullFormula(){
-        return this.formula.join(" ") + " " 
-                + this.lastOperation + " " 
+        return this.formula.join("")  
+                + this.lastOperation  
                 + this.actualNumber;
     }
 

@@ -1,9 +1,7 @@
 function Display(props) {
     
     return (
-            <div className="display">
-            {props.value}
-            </div>
+            <input className="display" value={props.value} readOnly={true}></input>
             );
 }
 

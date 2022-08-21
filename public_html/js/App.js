@@ -34,8 +34,12 @@ function App(props) {
 
     return (
             <div className="app-main">
-                <Display value={fullFormula}/>
-                <Display value={actualNumber}/>
+                <div>
+                    <DisplayMultiline value={fullFormula}/>
+                </div>
+                <div>
+                    <Display value={actualNumber}/>
+                </div>
                 <div>
                     <Button value={'7'} handleClick={handleClickNumber}/>
                     <Button value={'8'} handleClick={handleClickNumber}/>

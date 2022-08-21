@@ -1,20 +1,23 @@
 .app-main{
-    width: 170px;
-    height: 280px;
+    display: inline-block;
     padding: 20px;
     background-color: dimgray;
     border-radius: 5px;
 }
 
-.display{
+.display, .display-multiline{
     text-align: right;
     width: 164px;
     height: 25px;
     margin: 1px;
     padding: 1px;
-    background-color: bisque;
+    background-color: #FFFFCC;
     color: cornflowerblue;
-    font-size: 20px;
+    font-size: 16px;
+}
+
+.display-multiline{
+    height: 50px;
 }
 
 .simple-button{
